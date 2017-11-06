@@ -1,0 +1,155 @@
+<table border='10px' style="background-color: white;">
+    <tr style="height: 200px;">
+        <td>
+            <div id='currentSearchVideo1' style='
+                 background-color: green;
+                 '>
+                <img src='files/images/icons/playPause.png' alt='Mountain View' style='height: 150px; opacity: 0.9;'>
+            </div>
+        </td>
+    <tr style="height: 200px;">
+        <td>
+            <div id='currentSearchVideo2' style='
+                 background-color: green;
+                 '>
+                <img src='files/images/icons/replay.png' alt='Mountain View' style='height: 150px; opacity: 0.9;'>
+            </div>
+        </td>
+    <tr style="height: 200px;">
+        <td>
+            <div id='currentSearchVideo3' style='
+                 background-color: green;
+                 '>
+                <img src='files/images/icons/rightArrow.png' alt='Mountain View' style='height: 150px; opacity: 0.9;'>
+            </div>
+        </td>
+    </tr>
+</table>
+
+<script>
+    var imageVideo1 = document.getElementById("currentSearchVideo1");
+    var imageVideo2 = document.getElementById("currentSearchVideo2");
+    var imageVideo3 = document.getElementById("currentSearchVideo3");
+
+    imageVideo1.addEventListener("mouseover", dragons11, false);
+    imageVideo2.addEventListener("mouseover", dragons21, false);
+    imageVideo3.addEventListener("mouseover", dragons31, false);
+
+    imageVideo1.addEventListener("mouseout", dragons12, false);
+    imageVideo2.addEventListener("mouseout", dragons22, false);
+    imageVideo3.addEventListener("mouseout", dragons32, false);
+
+    var activado1 = 0;
+    var activado2 = 0;
+    var activado3 = 0;
+
+    function dragons11()
+    {
+        activado1++;
+
+        if (activado1 === 1)
+        {
+            imageVideo1.innerHTML = 
+                    "<div id='currentSearchVideo1' style='background-color: blue;'>" +
+                    "<video class='productMain containment-wrapper-video' height='150px' style='background-color: white;' muted='true' autoplay='true'>" +
+                    "<source src='{{ asset('files'~'/'~'katy perry this is how we do.mp4') }}' type='video/mp4'> " +
+                    "</video>" +
+                    "</div>";
+
+            imageVideo2.innerHTML = 
+                    "<div id='currentSearchVideo2' style='background-color: green;'>" +
+                    "<img src='files/images/icons/replay.png' alt='Mountain View' style='height: 150px; opacity: 0.9;'>" +
+                    "</div>";
+
+            imageVideo3.innerHTML = "<div id='currentSearchVideo3' style='background-color: green;'>" +
+                    "<img src='files/images/icons/rightArrow.png' alt='Mountain View' style='height: 150px; opacity: 0.9;'>" +
+                    "</div>";
+        }
+        
+{#        alert("status... ON: " + activado1);#}
+    }
+
+    function dragons21()
+    {
+        activado2++;
+        if (activado2 === 1)
+        {
+            imageVideo2.innerHTML = 
+                    "<div id='currentSearchVideo2' style='background-color: green;'>" +
+                    "<video class='productMain containment-wrapper-video' height='150px' style='background-color: white;' muted='true' autoplay='true'>" +
+                    "<source src='{{ asset('files'~'/'~'katy perry this is how we do.mp4') }}' type='video/mp4'> " +
+                    "</video>" +
+                    "</div>";
+
+            imageVideo1.innerHTML = "<div id='currentSearchVideo1' style='background-color: green;'>" +
+                    "<img src='files/images/icons/playPause.png' alt='Mountain View' style='height: 150px; opacity: 0.9;'>" +
+                    "</div>";
+
+            imageVideo3.innerHTML = "<div id='currentSearchVideo3' style='background-color: green;'>" +
+                    "<img src='files/images/icons/rightArrow.png' alt='Mountain View' style='height: 150px; opacity: 0.9;'>" +
+                    "</div>";
+        }
+{#        alert("status... ON: " + activado2);#}
+    }
+
+    function dragons31()
+    {
+        activado3++;
+        if (activado3 === 1)
+        {
+            imageVideo3.innerHTML = 
+                    "<div id='currentSearchVideo3' style='background-color: green;'>" +
+                    "<video class='productMain containment-wrapper-video' height='150px' style='background-color: white;' muted='true' autoplay='true'>" +
+                    "<source src='{{ asset('files'~'/'~'katy perry this is how we do.mp4') }}' type='video/mp4'> " +
+                    "</video>" +
+                    "</div>";
+
+            imageVideo1.innerHTML = "<div id='currentSearchVideo1' style='background-color: green;'>" +
+                    "<img src='files/images/icons/playPause.png' alt='Mountain View' style='height: 150px; opacity: 0.9;'>" +
+                    "</div>";
+
+            imageVideo2.innerHTML = "<div id='currentSearchVideo2' style='background-color: green;'>" +
+                    "<img src='files/images/icons/replay.png' alt='Mountain View' style='height: 150px; opacity: 0.9;'>" +
+                    "</div>";
+        }
+{#        alert("status... ON: " + activado3);#}
+    }
+
+    function dragons12()
+    {
+        activado1 = 0;
+{#        alert("status... OFF: " + activado1);#}
+    }
+
+    function dragons22()
+    {
+        activado2 = 0;
+{#        alert("status... OFF: " + activado2);#}
+    }
+
+    function dragons32()
+    {
+        activado3 = 0;
+{#        alert("status... OFF: " + activado3);#}
+    }
+
+</script>
+
+
+
+
+
+{#<video id='my_video2_1' class='productMain containment-wrapper-video' width='100%' height='98%' 
+       style='background-color: white;' autoplay='true' muted='true'>
+    <source src='{{ asset('files'~'/'~'katy perry this is how we do.mp4') }}' type='video/mp4'>
+</video>#}
+{#
+<video id="my_video2_2" class="productMain containment-wrapper-video" width="100%" height="98%" 
+       style="background-color: white;">
+    <source src="{{ asset('files'~'/'~'j balvin bonita.mp4') }}" type="video/mp4">
+</video>
+<video id="my_video2_3" class="productMain containment-wrapper-video" width="100%" height="98%" 
+       style="background-color: white;">
+    <source src="{{ asset('files'~'/'~'justin bieber baby.mp4') }}" type="video/mp4">
+</video>
+#}
